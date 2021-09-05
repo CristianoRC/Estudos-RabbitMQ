@@ -26,7 +26,19 @@ Com message broker também facilitamos a escala, podemos ter quantos consumidore
 ## Exchange
 
 Pega uma mensagem e manda para diversas filas. Basicamente podemos ter vários consumers processamento a mesma mensagem.
-Temos uma publicação da mensagem, o Rabbit pega essa mensagem e manda para várias filas, e temos workers específicos para tratar cada fila.
-Exemplo fictício de uma ação de compra, com uma mensagem podemos ter um consumer de log, outro de auditoria e outro para efetuar a compra.
+Temos uma publicação da mensagem, o Rabbit pega essa mensagem e manda para uma ou mais filas, e temos workers específicos para tratar cada fila.
+Exemplo fictício de uma ação de compra, com uma mensagem podemos ter um consumer de log, outro de auditoria e outro para efetuar a compra(nesse caso seria uma exchenge Fanout).
 
 ![Exchange](./images/exchange.png)
+
+
+### Tipos 
+
+- **Bind**: processo de configuração onde a gente fala que se a mensagem chegar na Exchange para qual fila ela deve ser enviada, isso tudo é processado com o uso de uma `Routing Key`
+
+- **Fanout**: distribui a mensagem que chega e manda para todas as filas associadas ao exchenge, seria o exemplo usado na imagem acima.
+
+- **Headers**: usa dados do cabeçalho para saber para onde mandar a mensagem, e aqui podemos fazer o match por `Regex`.
+
+
+## Rabbit
