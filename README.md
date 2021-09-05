@@ -41,4 +41,6 @@ Em resumo é um roteador de mensagem para uma ou mais filas.
 
 - **Headers**: usa dados do cabeçalho para saber para onde mandar a mensagem, e aqui podemos fazer o match por `Regex`.
 
+- **Exchange**: também podemos fazer uma exchange mandar uma mensagem para outra.
+
 ## Rabbit
