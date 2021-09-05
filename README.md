@@ -20,4 +20,7 @@ Nessa ideia de message broker temos três atores, quem gera a mensagem(publisher
 
 Com message broker também facilitamos a escala, podemos ter quantos consumidores e geradores de mensagem quisermos.
 
-![Rabbit](./images/rabbitMQ.png)
+![Rabbit](./images/rabbit-publisher-consumer.png)
+
+
+## Exchange
