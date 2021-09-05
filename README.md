@@ -28,7 +28,7 @@ Com message broker também facilitamos a escala, podemos ter quantos consumidore
 Pega uma mensagem e manda para diversas filas. Basicamente podemos ter vários consumers processamento a mesma mensagem.
 Temos uma publicação da mensagem, o Rabbit pega essa mensagem e manda para uma ou mais filas, e temos workers específicos para tratar cada fila.
 Exemplo fictício de uma ação de compra, com uma mensagem podemos ter um consumer de log, outro de auditoria e outro para efetuar a compra(nesse caso seria uma exchange Fanout).
-Em resumo é um roteador de mensagem para uma ou mais filas.
+Em resumo é um roteador de mensagem para uma ou mais filas, e na prática, você sempre passar por esse roteador.
 
 ![Exchange](./images/exchange.png)
 
