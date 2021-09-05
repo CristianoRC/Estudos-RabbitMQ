@@ -30,7 +30,7 @@ Temos uma publicação da mensagem, o Rabbit pega essa mensagem e manda para uma
 Exemplo fictício de uma ação de compra, com uma mensagem podemos ter um consumer de log, outro de auditoria e outro para efetuar a compra(nesse caso seria uma exchange Fanout).
 Em resumo é um roteador de mensagem para uma ou mais filas, e na prática, você sempre passar por esse roteador.
 
-![Exchange](./images/exchange.png)
+![Exchange](./images/exchange-fanout.png)
 
 
 ### Tipos 
