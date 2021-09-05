@@ -35,12 +35,13 @@ Em resumo é um roteador de mensagem para uma ou mais filas.
 
 ### Tipos 
 
-- **Bind**: processo de configuração onde a gente fala que se a mensagem chegar na Exchange para qual fila ela deve ser enviada, isso tudo é processado com o uso de uma `Routing Key`
+- **Direct**: processo de configuração onde a gente fala que se a mensagem chegar na Exchange para qual fila ela deve ser enviada, isso tudo é processado com o uso de uma `Routing Key`
 
 - **Fanout**: distribui a mensagem que chega e manda para todas as filas associadas ao exchange, seria o exemplo usado na imagem acima.
 
+- **Topic**: Faz uso de padrões do `Routing Key` para redirecionar para as filas, ex.: `user.*`
+
 - **Headers**: usa dados do cabeçalho para saber para onde mandar a mensagem, e aqui podemos fazer o match por `Regex`.
 
-- **Exchange**: também podemos fazer uma exchange mandar uma mensagem para outra.
 
 ## Rabbit
