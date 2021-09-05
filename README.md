@@ -41,5 +41,4 @@ Em resumo é um roteador de mensagem para uma ou mais filas.
 
 - **Headers**: usa dados do cabeçalho para saber para onde mandar a mensagem, e aqui podemos fazer o match por `Regex`.
 
-
 ## Rabbit
