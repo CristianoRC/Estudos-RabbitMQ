@@ -19,6 +19,7 @@ namespace background_service
             ConnectionFactory factory = new ConnectionFactory();
             factory.Uri = new Uri(_connectionString);
             factory.ClientProvidedName = "app:register";
+            factory.DispatchConsumersAsync = true;
 
             return factory.CreateConnection();
         }

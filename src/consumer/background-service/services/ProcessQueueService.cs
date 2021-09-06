@@ -11,29 +11,31 @@ namespace background_service
     public class ProcessQueueService : BackgroundService
     {
 
-        private readonly IConnection _connection;
+        private IModel _channel;
+        private readonly string _queueName = "register-weather-forecast";
 
         public ProcessQueueService(IConnection connection)
         {
-            _connection = connection;
+            _channel = connection.CreateModel();
+            _channel.BasicQos(0, 10, false);
         }
+
+        private string getEventContent(BasicDeliverEventArgs eventArgs)
+        {
+            var body = eventArgs.Body.ToArray();
+            return Encoding.UTF8.GetString(body);
+        }
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            using var channel = _connection.CreateModel();
-            channel.BasicQos(0, 10, false);
-
-            var consumer = new EventingBasicConsumer(channel);
-            consumer.Received += (sender, ea) =>
+            var consumer = new AsyncEventingBasicConsumer(_channel);
+            consumer.Received += async (sender, ea) =>
            {
-               Console.WriteLine($"Processando: {DateTime.Now.ToUniversalTime()}");
-               var body = ea.Body.ToArray();
-               var message = Encoding.UTF8.GetString(body);
-               channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
-
+               await MessageProcessor.Process(getEventContent(ea));
+               _channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
            };
 
-            var consumerTasks = channel.BasicConsume(queue: "register-weather-forecast", autoAck: false, consumer: consumer);
+            _channel.BasicConsume(queue: _queueName, autoAck: false, consumer: consumer);
         }
-
     }
 }
