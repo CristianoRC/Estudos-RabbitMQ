@@ -24,6 +24,8 @@ services:
     build: ./src/consumer/log
     container_name: log-consumer
     depends_on:
+      register-consumer:
+        condition: service_started
       rabbitmq:
         condition: service_healthy
     networks:
@@ -31,7 +33,7 @@ services:
     environment:
       CONNECTION_STRING: "amqp://cristiano:123456789@rabbitmq:5672"
 
-  regiter-consumer:
+  register-consumer:
     build: ./src/consumer/register
     container_name: register-consumer
     depends_on:
@@ -39,6 +41,8 @@ services:
         condition: service_healthy
     networks:
       - "rabbit_network"
+    environment:
+      CONNECTION_STRING: "amqp://cristiano:123456789@rabbitmq:5672"
 
   regiter-publisher:
     build: ./src/publisher/

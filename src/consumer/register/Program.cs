@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace register
 {
     class Program
     {
-        static void Main(string[] args)
+        async static Task Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var connectionFactory = new ConnectionFacotry();
+            var connection = connectionFactory.GetConnection();
+            var exchangeConfigurator = new ExchangeConfigurator(connection);
+            exchangeConfigurator.Configure();
         }
     }
 }
