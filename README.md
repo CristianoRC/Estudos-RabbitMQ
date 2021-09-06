@@ -6,7 +6,9 @@
 
 ## Exemplos
 
-- [**Cliente de Log Node.js**](./src/consumer/log)
+- [**Consumer de Log Node.js**](./src/consumer/log)
+- [**Consumer de Register .NET Core**](./src/consumer/register)
+- [**Publisher Asp Net Core**](./src/publisher/)
 
 ---
 
