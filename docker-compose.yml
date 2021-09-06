@@ -19,9 +19,10 @@ services:
       interval: 5s
       timeout: 10s
       retries: 5
-  # -----------------------------------------
+
   log-consumer:
     build: ./src/consumer/log
+    container_name: log-consumer
     depends_on:
       rabbitmq:
         condition: service_healthy
@@ -29,6 +30,16 @@ services:
       - "rabbit_network"
     environment:
       CONNECTION_STRING: "amqp://cristiano:123456789@rabbitmq:5672"
+
+  regiter-consumer:
+    build: ./src/consumer/register
+    container_name: register-consumer
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - "rabbit_network"
+
 networks:
   rabbit_network:
     driver: bridge
