@@ -40,6 +40,17 @@ services:
     networks:
       - "rabbit_network"
 
+  regiter-publisher:
+    build: ./src/publisher/
+    container_name: register-publisher
+    ports:
+      - "5000:80"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+    networks:
+      - "rabbit_network"
+
 networks:
   rabbit_network:
     driver: bridge
