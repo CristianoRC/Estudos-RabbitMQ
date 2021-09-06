@@ -1,7 +1,7 @@
 using System;
 using RabbitMQ.Client;
 
-namespace register
+namespace background_service
 {
     public class ConnectionFacotry
     {

@@ -34,7 +34,7 @@ services:
       CONNECTION_STRING: "amqp://cristiano:123456789@rabbitmq:5672"
 
   register-consumer:
-    build: ./src/consumer/register
+    build: ./src/consumer/background-service
     container_name: register-consumer
     depends_on:
       rabbitmq:
