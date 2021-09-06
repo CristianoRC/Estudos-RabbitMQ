@@ -29,7 +29,8 @@ namespace register
 
         private void BindQueues()
         {
-            _model.QueueBind(_logQueueName, _exchangeName, "*");
+            _model.QueueBind(_logQueueName, _exchangeName, "*.log");
+            _model.QueueBind(_logQueueName, _exchangeName, "register.*");
             _model.QueueBind(_registerQueuName, _exchangeName, "register.*");
         }
 
