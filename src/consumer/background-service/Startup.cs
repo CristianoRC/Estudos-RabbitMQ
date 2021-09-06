@@ -11,7 +11,7 @@ namespace background_service
 
         private IConnection ConfigureConnection()
         {
-            var connectionFactory = new ConnectionFacotry();
+            var connectionFactory = new ConnectionRabbitMq();
             var connection = connectionFactory.GetConnection();
             var exchangeConfigurator = new ExchangeConfigurator(connection);
             exchangeConfigurator.Configure();

@@ -3,12 +3,12 @@ using RabbitMQ.Client;
 
 namespace background_service
 {
-    public class ConnectionFacotry
+    public class ConnectionRabbitMq
     {
 
         private readonly string _connectionString;
 
-        public ConnectionFacotry()
+        public ConnectionRabbitMq()
         {
             _connectionString = Environment.GetEnvironmentVariable("CONNECTION_STRING");
         }
@@ -18,7 +18,7 @@ namespace background_service
         {
             ConnectionFactory factory = new ConnectionFactory();
             factory.Uri = new Uri(_connectionString);
-            factory.ClientProvidedName = "app:register";
+            factory.ClientProvidedName = "app:register:consumer";
             factory.DispatchConsumersAsync = true;
 
             return factory.CreateConnection();

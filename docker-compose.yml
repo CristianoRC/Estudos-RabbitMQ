@@ -54,6 +54,8 @@ services:
         condition: service_healthy
     networks:
       - "rabbit_network"
+    environment:
+      CONNECTION_STRING: "amqp://cristiano:123456789@rabbitmq:5672"
 
 networks:
   rabbit_network:
