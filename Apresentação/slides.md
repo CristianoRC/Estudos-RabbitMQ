@@ -126,6 +126,12 @@ A mensagem só pode ser lida por um consumidor!
 
 ### Exemplo com RabbitMQ
 
+![HTTP](./images/Flow.png){width=80%}
+
+---
+
+### Exemplo com RabbitMQ
+
 - Exemplo de velocidade de processamento
 - Um evento chama o outro
 
