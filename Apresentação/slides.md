@@ -96,11 +96,38 @@ enableChalkboard: false
 
 ### Filas
 
-![HTTP](./images/09-queue.png){width=60%}
+![HTTP](./images/09-queue.png){width=80%}
+
+---
+
+### Filas - Importante
+
+A mensagem só pode ser lida por um consumidor!
 
 ---
 
 ### Tópicos
+
+![HTTP](./images/10-topic.png){width=90%}
+
+---
+
+### Tópicos - Como funciona
+
+![HTTP](./images/11-real.png){width=100%}
+
+---
+
+### Exemplo com RabbitMQ
+
+![HTTP](./images/Exemplo.png){width=80%}
+
+---
+
+### Exemplo com RabbitMQ
+
+- Exemplo de velocidade de processamento
+- Um evento chama o outro
 
 ---
 
@@ -108,9 +135,7 @@ enableChalkboard: false
 
 ---
 
-
 ### Chave de idepotencia - Reprocessar
-
 
 ---
 
