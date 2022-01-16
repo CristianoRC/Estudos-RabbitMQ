@@ -141,7 +141,16 @@ A mensagem só pode ser lida por um consumidor!
 
 ---
 
-### Chave de idepotencia - Reprocessar
+### E se der problemas?
+
+![HTTP](./images/12-deadLetter.png){width=100%}
+
+---
+
+#### Chave de Idempotência - Reprocessar
+
+![HTTP](./images/Idempotencia.jpg){width=80%}
+[https://youtu.be/U0DyJx68oCY](https://youtu.be/U0DyJx68oCY)
 
 ---
 
