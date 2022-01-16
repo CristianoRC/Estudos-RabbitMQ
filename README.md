@@ -49,4 +49,6 @@ Em resumo é um roteador de mensagem para uma ou mais filas, e na prática, voc�
 
 Obs: duas exchanges diferentes podem mandar mensagem para a mesma fila.
 
-## Rabbit
+## Dicas
+
+- [RabbitMQ Simulator](http://tryrabbitmq.com/)
