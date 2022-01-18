@@ -64,9 +64,9 @@ enableChalkboard: false
 
 ---
 
-### Mensageria nos ajuda nisso
+### Principais conceitos
 
-![HTTP](./images/question.svg)
+![HTTP](./images/broker.png){width=75%}
 
 ---
 
