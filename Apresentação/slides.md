@@ -141,9 +141,23 @@ A mensagem só pode ser lida por um consumidor!
 
 ---
 
-### E se der problemas?
+### Validação
+
+ ![HTTP](./images/12.1-topic.png){width=100%}
+
+
+---
+
+### Exception?
 
 ![HTTP](./images/12-deadLetter.png){width=100%}
+
+---
+
+### Exception - Reprocessar
+
+![HTTP](./images/12.2-Reenqueue.png){width=100%}
+
 
 ---
 
