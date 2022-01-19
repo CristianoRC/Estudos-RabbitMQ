@@ -64,31 +64,31 @@ enableChalkboard: false
 
 ---
 
-### Principais conceitos
+#### Principais conceitos
 
 ![HTTP](./images/broker.png){width=75%}
 
 ---
 
-### Principais conceitos - Producer
+#### Principais conceitos - Producer
 
 ![HTTP](./images/05-producer.png)
 
 ---
 
-### Principais conceitos - Producer
+#### Principais conceitos - Producer
 
 ![HTTP](./images/06-message.png)
 
 ---
 
-### Principais conceitos - Message Broker
+#### Principais conceitos - Message Broker
 
 ![HTTP](./images/07-broker.png){width=60%}
 
 ---
 
-### Principais conceitos - Consumer
+##### Principais conceitos - Consumer
 
 ![HTTP](./images/08-consumer.png){width=60%}
 
