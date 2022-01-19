@@ -118,6 +118,12 @@ A mensagem só pode ser lida por um consumidor!
 
 ---
 
+### Exemplo básico
+
+![Flow](./images/Flow-Completo.png)
+
+---
+
 ### Exemplo com RabbitMQ
 
 ![HTTP](./images/Exemplo.png){width=80%}
